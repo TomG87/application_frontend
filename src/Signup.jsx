@@ -1,4 +1,5 @@
 import axios from "axios";
+import "./App.css";
 import { useState } from "react";
 
 export function Signup() {
@@ -7,35 +8,40 @@ export function Signup() {
   const handleSubmit = (event) => {
     event.preventDefault();
     setErrors([]);
-    const params = new FormData(event.target);
+    const params = {
+      name: event.target.name.value,
+      email: event.target.email.value,
+      password: event.target.password.value,
+    };
+
     axios
-      .post("http://localhost:3000/register.json", params)
+      .post("http://localhost:3000/api/users/register", params)
       .then((response) => {
         console.log(response.data);
         event.target.reset();
         window.location.href = "/login";
       })
       .catch((error) => {
-        console.log(error.response.data.errors);
-        setErrors(error.response.data.errors);
+        console.log(error.response?.data?.errors || error.message);
+        setErrors(error.response?.data?.errors || []);
       });
   };
 
   return (
     <div id="signup">
       <br></br>
-      <h1>Signup</h1>
+      <h1 className="signup-title">Signup</h1>
       <ul></ul>
       <form className="form" onSubmit={handleSubmit}>
-        <div className="row">
+        <div>
           <label htmlFor="name">Name:</label>
           <input name="name" type="text" />
         </div>
-        <div className="row">
+        <div>
           <label htmlFor="email">Email:</label>
           <input name="email" type="email" />
         </div>
-        <div className="row">
+        <div>
           <label htmlFor="password">Password:</label>
           <input name="password" type="password" />
         </div>
