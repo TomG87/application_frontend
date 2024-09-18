@@ -21,3 +21,14 @@
 .footer {
 text-align: center;
 }
+
+.success-message {
+  text-align: center;
+}
+
+.submit {
+  width: 50%;
+  max-width: 200px; 
+  padding: 10px;
+  margin: 0 auto;
+}

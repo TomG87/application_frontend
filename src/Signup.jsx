@@ -4,10 +4,12 @@ import { useState } from "react";
 
 export function Signup() {
   const [errors, setErrors] = useState([]);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setErrors([]);
+    setSuccessMessage("");
     const params = {
       name: event.target.name.value,
       email: event.target.email.value,
@@ -19,7 +21,8 @@ export function Signup() {
       .then((response) => {
         console.log(response.data);
         event.target.reset();
-        window.location.href = "/login";
+        setSuccessMessage("Your account has been successfully created!");
+        // window.location.href = "/login";
       })
       .catch((error) => {
         console.log(error.response?.data?.errors || error.message);
@@ -31,7 +34,17 @@ export function Signup() {
     <div id="signup">
       <br></br>
       <h1 className="signup-title">Signup</h1>
-      <ul></ul>
+
+      {successMessage && <p className="success-message">{successMessage}</p>}
+
+      <ul>
+        {errors.map((error, index) => (
+          <li key={index} className="error-message">
+            {error}
+          </li>
+        ))}
+      </ul>
+
       <form className="form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>
@@ -45,7 +58,7 @@ export function Signup() {
           <label htmlFor="password">Password:</label>
           <input name="password" type="password" />
         </div>
-        <button type="submit">Submit</button>
+        <button className="submit">Submit</button>
       </form>
     </div>
   );
