@@ -18,6 +18,7 @@ export function Login() {
       password: event.target.password.value,
     };
 
+    console.log("Params:", params);
     axios
       .post("http://localhost:3000/api/users/login", params)
       .then((response) => {
@@ -25,7 +26,6 @@ export function Login() {
         event.target.reset();
         setSuccessMessage("You have successfully logged in!");
 
-        // Store token or session details if using token-based authentication
         localStorage.setItem("token", response.data.token);
       })
       .catch((error) => {
