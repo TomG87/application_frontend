@@ -22,7 +22,6 @@ export function Login() {
     axios
       .post("http://localhost:3000/api/users/login", params)
       .then((response) => {
-        console.log(response.data);
         event.target.reset();
         setSuccessMessage("You have successfully logged in!");
 
