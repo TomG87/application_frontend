@@ -21,8 +21,12 @@ export function Signup() {
       .then((response) => {
         console.log(response.data);
         event.target.reset();
-        setSuccessMessage("Your account has been successfully created!");
-        // window.location.href = "/login";
+        setSuccessMessage(
+          "Your account has been successfully created! Please login to start adding your applications."
+        );
+        setTimeout(() => {
+          window.location.href = "/api/users/login";
+        }, 2000);
       })
       .catch((error) => {
         console.log(error.response?.data?.errors || error.message);
