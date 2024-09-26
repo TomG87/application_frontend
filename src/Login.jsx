@@ -26,6 +26,9 @@ export function Login() {
         setSuccessMessage("You have successfully logged in!");
 
         localStorage.setItem("token", response.data.token);
+        setTimeout(() => {
+          window.location.href = "/api/applications/create";
+        }, 2000);
       })
       .catch((error) => {
         console.log(error.response?.data?.errors || error.message);
