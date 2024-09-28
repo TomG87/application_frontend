@@ -15,7 +15,8 @@
   max-width: 400px;         
   margin: 0 auto;
   padding: 20px;
-  text-align: center;                      
+  text-align: center;
+  font-family: 'Verdana', sans-serif;              
 }
 
 .footer {
@@ -38,6 +39,7 @@ text-align: center;
 
 .login-title{
   text-align: center;
+  font-family: 'Verdana', sans-serif;
 }
 
 .application-add{ max-width: 400px;         
@@ -53,4 +55,5 @@ text-align: center;
 
   .application-title{
     text-align:center;
+    font-family: 'Verdana', sans-serif;
   }
