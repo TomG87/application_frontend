@@ -22,10 +22,13 @@ export function Login() {
     axios
       .post("http://localhost:3000/api/users/login", params)
       .then((response) => {
+        console.log("Login response:", response);
         event.target.reset();
         setSuccessMessage("You have successfully logged in!");
 
         localStorage.setItem("token", response.data.token);
+        localStorage.setItem("userId", response.data.userId);
+
         setTimeout(() => {
           window.location.href = "/api/applications/create";
         }, 2000);

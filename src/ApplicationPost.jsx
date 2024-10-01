@@ -1,12 +1,26 @@
 import axios from "axios";
-import "./App.css";
 import { useState } from "react";
+import "./App.css";
 
 export function ApplicationPost() {
   const [errors, setErrors] = useState([]);
+  const [message, setMessage] = useState("");
+  const [unsuccessful, setUnsuccessful] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    const userId = localStorage.getItem("userId");
+    if (!userId) {
+      setErrors(["User ID is required to submit the form."]);
+      setUnsuccessful("User ID is required to submit the form.");
+      return;
+    }
+    if (!userId) {
+      setErrors(["User ID is required to submit the form."]);
+      setUnsuccessful("User ID is required to submit the form.");
+      return;
+    }
 
     const formData = new FormData();
     formData.append("date", event.target.date.value);
@@ -26,6 +40,8 @@ export function ApplicationPost() {
       formData.append("attachment", file);
     }
 
+    formData.append("user", userId);
+
     const token = localStorage.getItem("token");
 
     axios
@@ -37,12 +53,17 @@ export function ApplicationPost() {
       })
       .then((response) => {
         event.target.reset();
-        console.log("Application created successfully!");
-        setErrors([]); // Clear errors after successful submission
+        setMessage("Application has been successfully added.");
+        setUnsuccessful("");
+        setErrors([]);
       })
       .catch((error) => {
         console.log(error.response?.data?.errors || error.message);
         setErrors(error.response?.data?.errors || []);
+        setUnsuccessful(
+          "There was a problem adding your application. Please try again."
+        );
+        setMessage("");
       });
   };
 
@@ -50,7 +71,9 @@ export function ApplicationPost() {
     <div id="application-add">
       <h1 className="application-title">Add Application</h1>
 
-      {/* Display any error messages */}
+      {message && <p className="success-message">{message}</p>}
+      {unsuccessful && <p className="unsuccessful-message">{unsuccessful}</p>}
+
       <ul>
         {errors.map((error, index) => (
           <li key={index} className="error-message">
@@ -74,7 +97,7 @@ export function ApplicationPost() {
         </div>
         <div>
           <label htmlFor="applicationLink">Application Link:</label>
-          <input name="applicationLink" type="url" />
+          <input name="applicationLink" type="url" pattern="https?://.*" />
         </div>
         <div>
           <label htmlFor="remote">Remote:</label>
