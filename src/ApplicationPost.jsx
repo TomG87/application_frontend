@@ -20,6 +20,7 @@ export function ApplicationPost() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log("Form Submitted");
 
     const userId = localStorage.getItem("userId");
     const token = localStorage.getItem("token");
@@ -48,7 +49,7 @@ export function ApplicationPost() {
     formData.append("interview", JSON.stringify(interview));
     formData.append("notes", event.target.notes.value);
 
-    const file = event.target.attachment.files[0];
+    const file = event.target.document.files[0];
     if (file) {
       formData.append("document", file);
     }
@@ -82,7 +83,7 @@ export function ApplicationPost() {
       setMessage("");
     }
 
-    console.log("Form Data:", {
+    console.log("Form Values:", {
       date: event.target.date.value,
       companyName: event.target.companyName.value,
       source: event.target.source.value,
