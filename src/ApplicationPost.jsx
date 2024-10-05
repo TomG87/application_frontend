@@ -1,29 +1,22 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import "./App.css";
+import React, { useState, useEffect } from "react"; // Importing React and hooks
+import { useNavigate } from "react-router-dom"; // Importing useNavigate for navigation
+import axios from "axios"; // Importing axios for HTTP requests
 
-export function ApplicationPost() {
+export function ApplicationPost({ userId, token }) {
   const [errors, setErrors] = useState([]);
   const [message, setMessage] = useState("");
   const [unsuccessful, setUnsuccessful] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
-    const userId = localStorage.getItem("userId");
-    const token = localStorage.getItem("token");
-
     if (!userId || !token) {
       navigate("/api/users/login");
     }
-  }, [navigate]);
+  }, [navigate, userId, token]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log("Form Submitted");
-
-    const userId = localStorage.getItem("userId");
-    const token = localStorage.getItem("token");
 
     if (!userId) {
       setErrors(["User ID is required to submit the form."]);

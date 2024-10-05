@@ -5,6 +5,9 @@ import { Login } from "./Login";
 import { ApplicationPost } from "./ApplicationPost";
 
 function App() {
+  const userId = localStorage.getItem("userId");
+  const token = localStorage.getItem("token");
+
   return (
     <Router>
       <div>
@@ -13,7 +16,7 @@ function App() {
           <Route path="/api/users/login" element={<Login />} />
           <Route
             path="/api/applications/create"
-            element={<ApplicationPost />}
+            element={<ApplicationPost userId={userId} token={token} />}
           />
         </Routes>
         <Footer />
