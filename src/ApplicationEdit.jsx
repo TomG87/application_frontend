@@ -25,6 +25,7 @@ export default function ApplicationEdit({ userId, token }) {
           setApplication(response.data);
         } catch (error) {
           console.error("Error fetching application:", error);
+          setErrors(["Failed to fetch application details."]);
         }
       };
 
@@ -75,7 +76,6 @@ export default function ApplicationEdit({ userId, token }) {
   return (
     <div>
       <h1>Edit Application</h1>
-
       {errors.length > 0 && (
         <ul>
           {errors.map((error, index) => (
@@ -85,7 +85,6 @@ export default function ApplicationEdit({ userId, token }) {
           ))}
         </ul>
       )}
-
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="date">Date:</label>
@@ -94,6 +93,7 @@ export default function ApplicationEdit({ userId, token }) {
             name="date"
             type="date"
             defaultValue={application.date}
+            required
           />
         </div>
         <div>
@@ -103,6 +103,7 @@ export default function ApplicationEdit({ userId, token }) {
             name="companyName"
             type="text"
             defaultValue={application.companyName}
+            required
           />
         </div>
         <div>
@@ -112,6 +113,7 @@ export default function ApplicationEdit({ userId, token }) {
             name="source"
             type="text"
             defaultValue={application.source}
+            required
           />
         </div>
         <div>
@@ -122,6 +124,7 @@ export default function ApplicationEdit({ userId, token }) {
             type="url"
             pattern="https?://.*"
             defaultValue={application.applicationLink}
+            required
           />
         </div>
         <div>
@@ -140,6 +143,7 @@ export default function ApplicationEdit({ userId, token }) {
             name="state"
             type="text"
             defaultValue={application.state}
+            required
           />
         </div>
         <div>

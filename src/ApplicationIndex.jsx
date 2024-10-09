@@ -1,10 +1,32 @@
 import "./App.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-export default function ApplicationIndex({ applications, userId, token }) {
+export default function ApplicationIndex({ userId, token }) {
   const navigate = useNavigate();
+  const [applications, setApplications] = useState([]);
+
+  // Function to fetch applications
+  const fetchApplications = async () => {
+    try {
+      const response = await axios.get(
+        `http://localhost:3000/api/applications/user-applications/${userId}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      setApplications(response.data);
+    } catch (error) {
+      console.error("Error fetching applications:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchApplications();
+  }, [userId, token]);
 
   const handleEdit = (applicationId) => {
     console.log("Navigating to edit application with ID:", applicationId);
@@ -21,7 +43,7 @@ export default function ApplicationIndex({ applications, userId, token }) {
           },
         }
       );
-      window.location.reload();
+      fetchApplications();
     } catch (error) {
       console.error("Error deleting the application:", error);
     }
@@ -40,7 +62,11 @@ export default function ApplicationIndex({ applications, userId, token }) {
               <p>Source: {application.source}</p>
               <p>
                 Link:{" "}
-                <a href={application.applicationLink}>
+                <a
+                  href={application.applicationLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {application.applicationLink}
                 </a>
               </p>
