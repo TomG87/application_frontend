@@ -53,7 +53,10 @@ function App() {
             path="/applications"
             element={<ApplicationIndex applications={applications} />} //
           />
-          <Route path="/applications/create" element={<ApplicationPost />} />
+          <Route 
+            path="/applications/create" 
+            element={<ApplicationPost userId={userId} token={token} />} 
+/>
         </Routes>
         <Footer />
       </div>

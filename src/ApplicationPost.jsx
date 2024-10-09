@@ -10,10 +10,11 @@ export function ApplicationPost({ userId, token }) {
 
   useEffect(() => {
     if (!userId || !token) {
+      navigate("/login");
+    } else {
       navigate("/applications/create");
     }
   }, [navigate, userId, token]);
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log("Form Submitted");
@@ -60,6 +61,7 @@ export function ApplicationPost({ userId, token }) {
           },
         }
       );
+
       event.target.reset();
       setMessage("Application has been successfully added.");
       setUnsuccessful("");
@@ -69,7 +71,6 @@ export function ApplicationPost({ userId, token }) {
       const errorMessage = error.response?.data?.errors || error.message;
 
       setErrors(Array.isArray(errorMessage) ? errorMessage : [errorMessage]);
-
       setUnsuccessful(
         "There was a problem adding your application. Please try again."
       );
