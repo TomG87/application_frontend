@@ -15,7 +15,7 @@ function App() {
     const fetchApplications = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3000/api/applications/user-applications/${userId}`, // Fetch user-specific applications
+          `http://localhost:3000/api/applications/user-applications/${userId}`,
           {
             method: "GET",
             headers: {
@@ -32,7 +32,7 @@ function App() {
         }
 
         const applicationsData = await response.json();
-        setApplications(applicationsData); // Set the fetched applications in the state
+        setApplications(applicationsData);
       } catch (error) {
         console.error(error);
       }
@@ -49,9 +49,12 @@ function App() {
         <Routes>
           <Route path="/register" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route
+            path="/applications"
+            element={<ApplicationIndex applications={applications} />} //
+          />
           <Route path="/applications/create" element={<ApplicationPost />} />
         </Routes>
-        <ApplicationIndex applications={applications} />
         <Footer />
       </div>
     </Router>

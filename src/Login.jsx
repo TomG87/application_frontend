@@ -1,4 +1,5 @@
 import axios from "axios";
+import React from "react";
 import "./App.css";
 import { useState } from "react";
 
@@ -30,7 +31,7 @@ export function Login() {
         localStorage.setItem("userId", response.data.userId);
 
         setTimeout(() => {
-          window.location.href = "/api/applications/create";
+          window.location.href = "/applications/create";
         }, 2000);
       })
       .catch((error) => {

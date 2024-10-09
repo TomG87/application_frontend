@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react"; // Importing React and hooks
-import { useNavigate } from "react-router-dom"; // Importing useNavigate for navigation
-import axios from "axios"; // Importing axios for HTTP requests
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export function ApplicationPost({ userId, token }) {
   const [errors, setErrors] = useState([]);
@@ -10,7 +10,7 @@ export function ApplicationPost({ userId, token }) {
 
   useEffect(() => {
     if (!userId || !token) {
-      navigate("/api/users/login");
+      navigate("/applications/create");
     }
   }, [navigate, userId, token]);
 
