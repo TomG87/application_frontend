@@ -4,6 +4,7 @@ import { Signup } from "./Signup";
 import { Login } from "./Login";
 import { ApplicationPost } from "./ApplicationPost";
 import ApplicationIndex from "./ApplicationIndex";
+import ApplicationEdit from "./ApplicationEdit";
 import React, { useEffect, useState } from "react";
 
 function App() {
@@ -51,13 +52,22 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route
             path="/applications"
-            element={<ApplicationIndex applications={applications} />} //
+            element={
+              <ApplicationIndex
+                applications={applications}
+                userId={userId}
+                token={token}
+              />
+            }
           />
           <Route
             path="/applications/create"
             element={<ApplicationPost userId={userId} token={token} />}
           />
-          <Route path="/applications/edit/:id" element={<ApplicationPost />} />
+          <Route
+            path="/applications/edit/:id"
+            element={<ApplicationEdit userId={userId} token={token} />}
+          />
         </Routes>
         <Footer />
       </div>

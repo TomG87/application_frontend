@@ -3,10 +3,11 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-export default function ApplicationIndex({ applications, token }) {
+export default function ApplicationIndex({ applications, userId, token }) {
   const navigate = useNavigate();
 
   const handleEdit = (applicationId) => {
+    console.log("Navigating to edit application with ID:", applicationId);
     navigate(`/applications/edit/${applicationId}`);
   };
 
@@ -20,8 +21,7 @@ export default function ApplicationIndex({ applications, token }) {
           },
         }
       );
-      // Optionally, refresh the applications list or remove the deleted application from the state
-      window.location.reload(); // simple page reload to reflect the updated list
+      window.location.reload();
     } catch (error) {
       console.error("Error deleting the application:", error);
     }
