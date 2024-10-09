@@ -8,6 +8,7 @@ export function ApplicationPost({ userId, token }) {
   const [unsuccessful, setUnsuccessful] = useState("");
   const navigate = useNavigate();
 
+  // Redirect if userId or token is missing
   useEffect(() => {
     if (!userId || !token) {
       navigate("/login");
@@ -15,6 +16,7 @@ export function ApplicationPost({ userId, token }) {
       navigate("/applications/create");
     }
   }, [navigate, userId, token]);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log("Form Submitted");
@@ -61,9 +63,11 @@ export function ApplicationPost({ userId, token }) {
           },
         }
       );
-
       event.target.reset();
       setMessage("Application has been successfully added.");
+      setTimeout(() => {
+        window.location.href = "/applications";
+      }, 2000);
       setUnsuccessful("");
       setErrors([]);
     } catch (error) {
@@ -71,6 +75,7 @@ export function ApplicationPost({ userId, token }) {
       const errorMessage = error.response?.data?.errors || error.message;
 
       setErrors(Array.isArray(errorMessage) ? errorMessage : [errorMessage]);
+
       setUnsuccessful(
         "There was a problem adding your application. Please try again."
       );
