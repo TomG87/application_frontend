@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 export function ApplicationPost({ userId, token }) {
@@ -8,7 +8,6 @@ export function ApplicationPost({ userId, token }) {
   const [unsuccessful, setUnsuccessful] = useState("");
   const navigate = useNavigate();
 
-  // Redirect if userId or token is missing
   useEffect(() => {
     if (!userId || !token) {
       navigate("/login");
@@ -100,10 +99,8 @@ export function ApplicationPost({ userId, token }) {
   return (
     <div id="application-add">
       <h1 className="application-title">Add Application</h1>
-
       {message && <p className="success-message">{message}</p>}
       {unsuccessful && <p className="unsuccessful-message">{unsuccessful}</p>}
-
       <ul>
         {errors.map((error, index) => (
           <li key={index} className="error-message">
@@ -111,7 +108,6 @@ export function ApplicationPost({ userId, token }) {
           </li>
         ))}
       </ul>
-
       <form className="form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="date">Date:</label>
@@ -168,6 +164,13 @@ export function ApplicationPost({ userId, token }) {
         </div>
         <button className="submit">Submit</button>
       </form>
+      <div className="applicationpost-link">
+        {/* Link to ApplicationIndex page */}
+        <Link to="/applications">
+          Click here to view all your Applications
+        </Link>{" "}
+      </div>
+      {/* Correct usage */}
     </div>
   );
 }

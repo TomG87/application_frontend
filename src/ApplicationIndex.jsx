@@ -1,7 +1,32 @@
 import "./App.css";
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
-export default function ApplicationIndex({ applications }) {
+export default function ApplicationIndex({ applications, token }) {
+  const navigate = useNavigate();
+
+  const handleEdit = (applicationId) => {
+    navigate(`/applications/edit/${applicationId}`);
+  };
+
+  const handleDelete = async (applicationId) => {
+    try {
+      await axios.delete(
+        `http://localhost:3000/api/applications/${applicationId}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      // Optionally, refresh the applications list or remove the deleted application from the state
+      window.location.reload(); // simple page reload to reflect the updated list
+    } catch (error) {
+      console.error("Error deleting the application:", error);
+    }
+  };
+
   return (
     <div>
       {applications.length === 0 ? (
@@ -41,6 +66,11 @@ export default function ApplicationIndex({ applications }) {
                   </a>
                 </div>
               )}
+              {/* Edit and Delete Buttons */}
+              <button onClick={() => handleEdit(application._id)}>Edit</button>
+              <button onClick={() => handleDelete(application._id)}>
+                Delete
+              </button>
             </li>
           ))}
         </ul>
