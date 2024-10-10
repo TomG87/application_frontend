@@ -75,100 +75,102 @@ export default function ApplicationEdit({ userId, token }) {
 
   return (
     <div>
-      <h1>Edit Application</h1>
-      {errors.length > 0 && (
-        <ul>
-          {errors.map((error, index) => (
-            <li key={index} className="error-message">
-              {error}
-            </li>
-          ))}
-        </ul>
-      )}
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="date">Date:</label>
-          <input
-            id="date"
-            name="date"
-            type="date"
-            defaultValue={application.date}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="companyName">Company Name:</label>
-          <input
-            id="companyName"
-            name="companyName"
-            type="text"
-            defaultValue={application.companyName}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="source">Source:</label>
-          <input
-            id="source"
-            name="source"
-            type="text"
-            defaultValue={application.source}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="applicationLink">Application Link:</label>
-          <input
-            id="applicationLink"
-            name="applicationLink"
-            type="url"
-            pattern="https?://.*"
-            defaultValue={application.applicationLink}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="remote">Remote:</label>
-          <input
-            id="remote"
-            name="remote"
-            type="checkbox"
-            defaultChecked={application.remote}
-          />
-        </div>
-        <div>
-          <label htmlFor="state">State:</label>
-          <input
-            id="state"
-            name="state"
-            type="text"
-            defaultValue={application.state}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="response">Response:</label>
-          <input
-            id="response"
-            name="response"
-            type="checkbox"
-            defaultChecked={application.response}
-          />
-        </div>
-        <div>
-          <label htmlFor="notes">Notes:</label>
-          <textarea
-            id="notes"
-            name="notes"
-            defaultValue={application.notes}
-          ></textarea>
-        </div>
-        <div>
-          <label htmlFor="attachment">Attachment:</label>
-          <input id="attachment" name="document" type="file" />
-        </div>
-        <button type="submit">Update Application</button>
-      </form>
+      <div className="application-edit-tile">
+        <h1>Edit Application</h1>
+        {errors.length > 0 && (
+          <ul>
+            {errors.map((error, index) => (
+              <li key={index} className="error-message">
+                {error}
+              </li>
+            ))}
+          </ul>
+        )}
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor="date">Date:</label>
+            <input
+              id="date"
+              name="date"
+              type="date"
+              defaultValue={application.date}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="companyName">Company Name:</label>
+            <input
+              id="companyName"
+              name="companyName"
+              type="text"
+              defaultValue={application.companyName}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="source">Source:</label>
+            <input
+              id="source"
+              name="source"
+              type="text"
+              defaultValue={application.source}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="applicationLink">Application Link:</label>
+            <input
+              id="applicationLink"
+              name="applicationLink"
+              type="url"
+              pattern="https?://.*"
+              defaultValue={application.applicationLink}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="remote">Remote:</label>
+            <input
+              id="remote"
+              name="remote"
+              type="checkbox"
+              defaultChecked={application.remote}
+            />
+          </div>
+          <div>
+            <label htmlFor="state">State:</label>
+            <input
+              id="state"
+              name="state"
+              type="text"
+              defaultValue={application.state}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="response">Response:</label>
+            <input
+              id="response"
+              name="response"
+              type="checkbox"
+              defaultChecked={application.response}
+            />
+          </div>
+          <div>
+            <label htmlFor="notes">Notes:</label>
+            <textarea
+              id="notes"
+              name="notes"
+              defaultValue={application.notes}
+            ></textarea>
+          </div>
+          <div>
+            <label htmlFor="attachment">Attachment:</label>
+            <input id="attachment" name="document" type="file" />
+          </div>
+          <button type="submit">Update Application</button>
+        </form>
+      </div>
     </div>
   );
 }
