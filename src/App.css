@@ -61,3 +61,16 @@ text-align: center;
   .applicationpost-link{
     text-align:center;
   }
+  .application-index-tile{
+  max-width: 400px;         
+  margin: 0 auto;            
+  padding: 20px;             
+  border: 1px solid #cccccc;
+  border-radius: 20px;        
+  background-color: #f9f9f9; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  text-align: center;        
+  display:grid;             
+  grid-gap: 15px;
+  font-family: 'Verdana', sans-serif;
+  }

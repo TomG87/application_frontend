@@ -51,6 +51,7 @@ export default function ApplicationIndex({ userId, token }) {
 
   return (
     <div>
+      <div className="application-index-tile">
       {applications.length === 0 ? (
         <p>No applications found.</p>
       ) : (
@@ -101,6 +102,7 @@ export default function ApplicationIndex({ userId, token }) {
           ))}
         </ul>
       )}
+      </div>
     </div>
   );
 }
