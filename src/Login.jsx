@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import "./App.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Login() {
   const [errors, setErrors] = useState([]);
@@ -70,6 +71,9 @@ export function Login() {
         </div>
         <button className="submit">Login</button>
       </form>
+      <div className="login-link">
+        <Link to="/register">Click here to create your Account</Link>{" "}
+      </div>
     </div>
   );
 }

@@ -165,12 +165,8 @@ export function ApplicationPost({ userId, token }) {
         <button className="submit">Submit</button>
       </form>
       <div className="applicationpost-link">
-        {/* Link to ApplicationIndex page */}
-        <Link to="/applications">
-          Click here to view all your Applications
-        </Link>{" "}
+        <Link to="/applications">Click here to view all your Applications</Link>{" "}
       </div>
-      {/* Correct usage */}
     </div>
   );
 }
