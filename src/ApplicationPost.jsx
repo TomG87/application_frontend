@@ -164,6 +164,7 @@ export function ApplicationPost({ userId, token }) {
         </div>
         <button className="submit">Submit</button>
       </form>
+      <br></br>
       <div className="applicationpost-link">
         <Link to="/applications">Click here to view all your Applications</Link>{" "}
       </div>
