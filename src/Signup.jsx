@@ -66,6 +66,7 @@ export function Signup() {
         </div>
         <button className="submit">Submit</button>
       </form>
+      <br></br>
       <div className="login-link">
         <Link to="/login">Already have an Account? Click here</Link>{" "}
       </div>
