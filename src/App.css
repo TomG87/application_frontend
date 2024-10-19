@@ -1,14 +1,16 @@
 .form {
-  max-width: 400px;         
+  max-width: 350px;         
   margin: 0 auto;            
   padding: 20px;             
   border: 1px solid #cccccc;
-  border-radius: 20px;        
+  border-radius: 50px;        
   background-color: #f9f9f9; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   text-align: center;        
   display: grid;             
-  grid-gap: 15px;            
+  grid-gap: 30px;
+  position: relative;
+  top: 50px;            
 }
 
 .signup-title {
