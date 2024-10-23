@@ -98,6 +98,10 @@ export function ApplicationPost({ userId, token }) {
 
   return (
     <div id="application-add">
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <h1 className="application-title">Add Application</h1>
       {message && <p className="success-message">{message}</p>}
       {unsuccessful && <p className="unsuccessful-message">{unsuccessful}</p>}
@@ -164,6 +168,10 @@ export function ApplicationPost({ userId, token }) {
         </div>
         <button className="submit">Submit</button>
       </form>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <br></br>
       <div className="applicationpost-link">
         <Link to="/applications">Click here to view all your Applications</Link>{" "}
