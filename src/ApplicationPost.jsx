@@ -108,7 +108,7 @@ export function ApplicationPost({ userId, token }) {
           </li>
         ))}
       </ul>
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="app-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="date">Date:</label>
           <input id="date" name="date" type="date" />
