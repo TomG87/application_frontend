@@ -78,6 +78,7 @@ export function Login() {
       <br></br>
       <br></br>
       <br></br>
+      <br></br>
       <div className="register-link">
         <Link to="/register">Click here to create your Account</Link>{" "}
       </div>

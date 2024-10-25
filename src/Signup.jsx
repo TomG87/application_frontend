@@ -39,6 +39,9 @@ export function Signup() {
   return (
     <div id="signup">
       <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <h1 className="signup-title">Signup</h1>
 
       {successMessage && <p className="success-message">{successMessage}</p>}
@@ -66,6 +69,10 @@ export function Signup() {
         </div>
         <button className="submit">Submit</button>
       </form>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <br></br>
       <div className="login-link">
         <Link to="/login">Already have an Account? Click here</Link>{" "}
