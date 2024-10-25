@@ -53,7 +53,7 @@ export function ApplicationPost({ userId, token }) {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/applications/create",
+        "http://localhost:3000/api/applications",
         formData,
         {
           headers: {
