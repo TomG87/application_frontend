@@ -51,7 +51,7 @@ export function Signup() {
         ))}
       </ul>
 
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="signup-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>
           <input name="name" type="text" />

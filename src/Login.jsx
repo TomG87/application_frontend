@@ -63,7 +63,7 @@ export function Login() {
         ))}
       </ul>
 
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="login-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="email">Email:</label>
           <input name="email" type="email" />
