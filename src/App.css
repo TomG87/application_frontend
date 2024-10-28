@@ -74,7 +74,7 @@ text-align: center;
   .application-cards-container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 15px;
+    grid-gap: 25px;
   }
   .application-edit-tile{
     max-width: 400px;         
@@ -131,9 +131,9 @@ text-align: center;
   .application-card {
     max-width: 400px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 45px;
     border: 1px solid #cccccc;
-    border-radius: 20px;
+    border-radius: 25px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
