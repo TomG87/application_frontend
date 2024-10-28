@@ -52,56 +52,57 @@ export default function ApplicationIndex({ userId, token }) {
   return (
     <div>
       <div className="application-index-tile">
-      {applications.length === 0 ? (
-        <p>No applications found.</p>
-      ) : (
-        <ul>
-          {applications.map((application) => (
-            <li key={application._id}>
-              <h2>{application.companyName}</h2>
-              <p>Date: {application.date}</p>
-              <p>Source: {application.source}</p>
-              <p>
-                Link:{" "}
-                <a
-                  href={application.applicationLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {application.applicationLink}
-                </a>
-              </p>
-              <p>Remote: {application.remote ? "Yes" : "No"}</p>
-              <p>State: {application.state}</p>
-              <p>Response: {application.response ? "Yes" : "No"}</p>
-              <div>
-                <h4>Interview Details</h4>
-                <p>Date: {application.interview?.date || "N/A"}</p>
-                <p>Time: {application.interview?.time || "N/A"}</p>
-                <p>Location: {application.interview?.location || "N/A"}</p>
-              </div>
-              <p>Notes: {application.notes}</p>
-              {application.document && (
-                <div>
-                  <h4>Attached Document:</h4>
+        {applications.length === 0 ? (
+          <p>No applications found.</p>
+        ) : (
+          <div className="application-cards-container">
+            {applications.map((application) => (
+              <div key={application._id} className="application-card">
+                <h2>{application.companyName}</h2>
+                <p>Date: {application.date}</p>
+                <p>Source: {application.source}</p>
+                <p>
+                  Link:{" "}
                   <a
-                    href={`/${application.document.filePath}`}
+                    href={application.applicationLink}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {application.document.fileName}
+                    {application.applicationLink}
                   </a>
+                </p>
+                <p>Remote: {application.remote ? "Yes" : "No"}</p>
+                <p>State: {application.state}</p>
+                <p>Response: {application.response ? "Yes" : "No"}</p>
+                <div>
+                  <h4>Interview Details</h4>
+                  <p>Date: {application.interview?.date || "N/A"}</p>
+                  <p>Time: {application.interview?.time || "N/A"}</p>
+                  <p>Location: {application.interview?.location || "N/A"}</p>
                 </div>
-              )}
-              {/* Edit and Delete Buttons */}
-              <button onClick={() => handleEdit(application._id)}>Edit</button>
-              <button onClick={() => handleDelete(application._id)}>
-                Delete
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
+                <p>Notes: {application.notes}</p>
+                {application.document && (
+                  <div>
+                    <h4>Attached Document:</h4>
+                    <a
+                      href={`/${application.document.filePath}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {application.document.fileName}
+                    </a>
+                  </div>
+                )}
+                <button onClick={() => handleEdit(application._id)}>
+                  Edit
+                </button>
+                <button onClick={() => handleDelete(application._id)}>
+                  Delete
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

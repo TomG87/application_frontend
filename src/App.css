@@ -71,18 +71,10 @@ text-align: center;
   .applicationpost-link{
     text-align:center;
   }
-  .application-index-tile{
-  max-width: 400px;         
-  margin: 0 auto;            
-  padding: 20px;             
-  border: 1px solid #cccccc;
-  border-radius: 20px;        
-  background-color: #f9f9f9; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  text-align: center;        
-  display:grid;             
-  grid-gap: 15px;
-  font-family: 'Verdana', sans-serif;
+  .application-cards-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
   }
   .application-edit-tile{
     max-width: 400px;         
@@ -134,4 +126,16 @@ text-align: center;
     position: relative;
     text-align: center;
     top: 75px; 
+  }
+
+  .application-card {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Verdana', sans-serif;
   }
