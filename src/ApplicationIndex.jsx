@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 export default function ApplicationIndex({ userId, token }) {
@@ -51,6 +51,9 @@ export default function ApplicationIndex({ userId, token }) {
 
   return (
     <div>
+      <div className="application-add">
+        <Link to="/applications/create">Click here to add an Application</Link>{" "}
+      </div>
       <div className="application-index-tile">
         {applications.length === 0 ? (
           <p>No applications found.</p>
