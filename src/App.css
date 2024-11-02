@@ -77,20 +77,28 @@ text-align: center;
     grid-gap: 25px;
   }
   .application-edit-tile{
-    max-width: 250px;         
-    margin: 0 auto;            
-    padding: 60px;             
+    display: block;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 30px;
     border: 1px solid #cccccc;
-    border-radius: 35px;        
-    background-color: #f9f9f9; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    display: grid;             
-    grid-gap: 25px;
-    position: relative;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    top: 75px; 
+    font-family: 'Verdana', sans-serif;
   }
-
+  .application-card {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 45px;
+    border: 1px solid #cccccc;
+    border-radius: 25px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Verdana', sans-serif;
+  }
   .register-link{
   text-align: center;   
   }
@@ -127,18 +135,6 @@ text-align: center;
     position: relative;
     text-align: center;
     top: 75px; 
-  }
-
-  .application-card {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 45px;
-    border: 1px solid #cccccc;
-    border-radius: 25px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    font-family: 'Verdana', sans-serif;
   }
 
   .application-add{
