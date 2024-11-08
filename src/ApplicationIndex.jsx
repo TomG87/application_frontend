@@ -54,9 +54,15 @@ export default function ApplicationIndex({ userId, token }) {
       <br></br>
       <br></br>
       <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <h1 className="applications-title">Your Applications</h1>
       <div className="application-add">
         <Link to="/applications/create">Click here to add an Application</Link>{" "}
       </div>
+      <br></br>
+      <br></br>
       <div className="application-index-tile">
         {applications.length === 0 ? (
           <p>No applications found.</p>
