@@ -3,6 +3,7 @@ import "./App.css";
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { IoLogIn } from "react-icons/io5";
 
 export function Signup() {
   const [errors, setErrors] = useState([]);
@@ -75,7 +76,9 @@ export function Signup() {
       <br></br>
       <br></br>
       <div className="login-link">
-        <Link to="/login">Already have an Account? Click here</Link>{" "}
+        <Link to="/login">
+          <IoLogIn className="login-icon" /> Login
+        </Link>
       </div>
     </div>
   );
