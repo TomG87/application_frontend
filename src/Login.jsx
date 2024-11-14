@@ -3,7 +3,7 @@ import React from "react";
 import "./App.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { MdOutlineCreateNewFolder } from "react-icons/md";
+import { PiUserCircleDuotone } from "react-icons/pi";
 
 export function Login() {
   const [errors, setErrors] = useState([]);
@@ -82,7 +82,7 @@ export function Login() {
       <br></br>
       <div className="register-link">
         <Link to="/register">
-          <MdOutlineCreateNewFolder className="signup-icon" /> Signup
+          <PiUserCircleDuotone className="signup-icon" /> Signup
         </Link>
       </div>
     </div>
