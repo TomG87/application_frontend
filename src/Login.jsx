@@ -3,6 +3,7 @@ import React from "react";
 import "./App.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { MdOutlineCreateNewFolder } from "react-icons/md";
 
 export function Login() {
   const [errors, setErrors] = useState([]);
@@ -80,7 +81,9 @@ export function Login() {
       <br></br>
       <br></br>
       <div className="register-link">
-        <Link to="/register">Click here to create your Account</Link>{" "}
+        <Link to="/register">
+          <MdOutlineCreateNewFolder className="signup-icon" /> Signup
+        </Link>
       </div>
     </div>
   );
