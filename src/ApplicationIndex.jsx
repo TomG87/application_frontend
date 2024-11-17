@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+import { AiTwotoneFileAdd } from "react-icons/ai";
 
 export default function ApplicationIndex({ userId, token }) {
   const navigate = useNavigate();
@@ -59,7 +60,9 @@ export default function ApplicationIndex({ userId, token }) {
       <br></br>
       <h1 className="applications-title">Your Applications</h1>
       <div className="application-add">
-        <Link to="/applications/create">Click here to add an Application</Link>{" "}
+        <Link to="/applications/create">
+          <AiTwotoneFileAdd className="add-resume-icon" /> Add Resume{" "}
+        </Link>
       </div>
       <br></br>
       <br></br>
