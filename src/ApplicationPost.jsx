@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+import { LiaListAlt } from "react-icons/lia";
 
 export function ApplicationPost({ userId, token }) {
   const [errors, setErrors] = useState([]);
@@ -174,7 +175,9 @@ export function ApplicationPost({ userId, token }) {
       <br></br>
       <br></br>
       <div className="applicationpost-link">
-        <Link to="/applications">Click here to view all your Applications</Link>{" "}
+        <Link to="/applications">
+          <LiaListAlt className="total-resume-icon">My Resumes </LiaListAlt>
+        </Link>
       </div>
     </div>
   );
