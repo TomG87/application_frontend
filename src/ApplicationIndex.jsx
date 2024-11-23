@@ -67,16 +67,16 @@ export default function ApplicationIndex({ userId, token }) {
       <br></br>
       <br></br>
       <br></br>
-      <br></br>
       <h1 className="applications-title">My Applications</h1>
       <div className="application-add">
         <Link to="/applications/create">
           <AiTwotoneFileAdd className="add-resume-icon" /> Add Resume{" "}
         </Link>
+        <div className="logout-icon" onClick={handleLogout}>
+          Logout
+        </div>
       </div>
-      <div className="logout-icon">
-        <div onClick={handleLogout}>Logout</div>
-      </div>
+
       <br></br>
       <br></br>
       <div className="application-index-tile">

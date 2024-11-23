@@ -192,8 +192,6 @@ text-align: center;
   }
 
   .logout-icon{
-    margin-right: 8px; 
-    font-size: 3em;
-    vertical-align: middle;
-    color: black
+    font-size: 2em;
+    cursor: pointer;
   }
