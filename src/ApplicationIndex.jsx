@@ -8,6 +8,12 @@ export default function ApplicationIndex({ userId, token }) {
   const navigate = useNavigate();
   const [applications, setApplications] = useState([]);
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+
+    navigate("/login");
+  };
+
   // Function to fetch applications
   const fetchApplications = async () => {
     try {
@@ -63,6 +69,9 @@ export default function ApplicationIndex({ userId, token }) {
         <Link to="/applications/create">
           <AiTwotoneFileAdd className="add-resume-icon" /> Add Resume{" "}
         </Link>
+      </div>
+      <div className="logout-icon">
+        <button onClick={handleLogout}>Logout</button>
       </div>
       <br></br>
       <br></br>
