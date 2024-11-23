@@ -8,13 +8,14 @@ export default function ApplicationIndex({ userId, token }) {
   const navigate = useNavigate();
   const [applications, setApplications] = useState([]);
 
+  // Logout function
   const handleLogout = () => {
     localStorage.removeItem("token");
-
+    console.log("Logging out");
     navigate("/login");
   };
 
-  // Function to fetch applications
+  // Fetch applications from the server
   const fetchApplications = async () => {
     try {
       const response = await axios.get(
@@ -35,11 +36,13 @@ export default function ApplicationIndex({ userId, token }) {
     fetchApplications();
   }, [userId, token]);
 
+  // Handle edit navigation
   const handleEdit = (applicationId) => {
     console.log("Navigating to edit application with ID:", applicationId);
     navigate(`/applications/edit/${applicationId}`);
   };
 
+  // Handle application deletion
   const handleDelete = async (applicationId) => {
     try {
       await axios.delete(
@@ -50,6 +53,7 @@ export default function ApplicationIndex({ userId, token }) {
           },
         }
       );
+      // Fetch applications on component mount
       fetchApplications();
     } catch (error) {
       console.error("Error deleting the application:", error);
@@ -71,7 +75,7 @@ export default function ApplicationIndex({ userId, token }) {
         </Link>
       </div>
       <div className="logout-icon">
-        <button onClick={handleLogout}>Logout</button>
+        <div onClick={handleLogout}>Logout</div>
       </div>
       <br></br>
       <br></br>
