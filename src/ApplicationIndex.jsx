@@ -71,13 +71,12 @@ export default function ApplicationIndex({ userId, token }) {
       <h1 className="applications-title">My Applications</h1>
       <div className="application-add">
         <Link to="/applications/create">
-          <AiTwotoneFileAdd className="add-resume-icon" /> Add Resume{" "}
+          <AiTwotoneFileAdd className="add-resume-icon" /> Add Resume
         </Link>
-        <div className="logout-icon">
-          <IoLogOutOutline onClick={handleLogout}></IoLogOutOutline>Logout
+        <div className="logout-icon" onClick={handleLogout}>
+          <IoLogOutOutline /> Logout
         </div>
       </div>
-
       <br></br>
       <br></br>
       <div className="application-index-tile">
