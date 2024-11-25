@@ -70,12 +70,21 @@ export default function ApplicationIndex({ userId, token }) {
       <br></br>
       <h1 className="applications-title">My Applications</h1>
       <div className="application-add">
-        <Link to="/applications/create">
-          <AiTwotoneFileAdd className="add-resume-icon" /> Add Resume
+        <Link to="/applications/create" className="action-link">
+          <AiTwotoneFileAdd className="action-icon" />
+          <span>Add Resume</span>
         </Link>
-        <div className="logout-icon" onClick={handleLogout}>
-          <IoLogOutOutline /> Logout
-        </div>
+        <Link
+          to="/login"
+          className="action-link"
+          onClick={(e) => {
+            e.preventDefault();
+            handleLogout();
+          }}
+        >
+          <IoLogOutOutline className="action-icon" />
+          <span>Logout</span>
+        </Link>
       </div>
       <br></br>
       <br></br>

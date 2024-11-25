@@ -159,12 +159,6 @@ text-align: center;
     top: 75px; 
   }
 
-  .application-add{
-    text-align: right;
-    top: 20px; 
-    padding: 10px;
-  }
-
   .login-icon{
     margin-right: 8px; 
     font-size: 3em;
@@ -190,15 +184,25 @@ text-align: center;
     vertical-align: middle;
     color: black
   }
-
-  .logout-icon{
-    font-size: 2em;
-    cursor: pointer;
+  .application-add {
+    text-align: right;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px; 
+    align-items: center;
   }
-
-  .logout-icon{
-    margin-right: 8px; 
-    font-size: 3em;
+  
+  .action-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+    color: black;
+    font-size: 1.2em; 
+  }
+  
+  .action-icon {
+    font-size: 2.5em; 
+    margin-right: 5px; 
     vertical-align: middle;
-    color: black
   }
