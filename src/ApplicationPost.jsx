@@ -174,10 +174,10 @@ export function ApplicationPost({ userId, token }) {
       <br></br>
       <br></br>
       <br></br>
-      <div className="applicationpost-link">
-        <Link to="/applications">
-          <LiaListAlt className="total-resume-icon" />
-          My Applications
+      <div>
+        <Link to="/applications" className="action-link">
+          <LiaListAlt className="action-icon" />
+          <span>My Applications</span>
         </Link>
       </div>
     </div>

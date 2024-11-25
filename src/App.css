@@ -89,8 +89,7 @@ text-align: center;
     text-align:center;
     font-family: 'Verdana', sans-serif;
   }
-
-  .applicationpost-link{
+  .application-post-link{
     text-align:center;
   }
   .application-cards-container{
@@ -163,26 +162,29 @@ text-align: center;
     margin-right: 8px; 
     font-size: 3em;
     vertical-align: middle;
-    color: black
+    color: black;
+    text-decoration: none;
   }
 
   .signup-icon{
     margin-right: 8px; 
     font-size: 3em;
     vertical-align: middle;
-    color: black
+    color: black;
+    text-decoration: none; 
   }
   .add-resume-icon{
     margin-right: 8px; 
     font-size: 3em;
     vertical-align: middle;
-    color: black
+    color: black;
+    text-decoration: none; 
   }
   .total-resume-icon{
-    margin-right: 8px; 
-    font-size: 3em;
-    vertical-align: middle;
-    color: black
+    font-size: 2.5em; 
+    margin-right: 5px;
+    position: relative; 
+    top: 2px; 
   }
   .application-add {
     text-align: right;
@@ -195,14 +197,14 @@ text-align: center;
   
   .action-link {
     display: flex;
-    align-items: center;
+    align-items: center; 
     text-decoration: none; 
-    color: black;
-    font-size: 1.2em; 
+    gap: 8px; 
+    color: black; 
   }
   
   .action-icon {
     font-size: 2.5em; 
-    margin-right: 5px; 
-    vertical-align: middle;
+    display: inline-block; 
+    vertical-align: middle; 
   }
