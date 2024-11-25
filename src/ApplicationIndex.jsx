@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import { AiTwotoneFileAdd } from "react-icons/ai";
+import { IoLogOutOutline } from "react-icons/io5";
 
 export default function ApplicationIndex({ userId, token }) {
   const navigate = useNavigate();
@@ -72,8 +73,8 @@ export default function ApplicationIndex({ userId, token }) {
         <Link to="/applications/create">
           <AiTwotoneFileAdd className="add-resume-icon" /> Add Resume{" "}
         </Link>
-        <div className="logout-icon" onClick={handleLogout}>
-          Logout
+        <div className="logout-icon">
+          <IoLogOutOutline onClick={handleLogout}></IoLogOutOutline>Logout
         </div>
       </div>
 
