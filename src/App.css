@@ -194,6 +194,14 @@ text-align: center;
     gap: 20px; 
     align-items: center;
   }
+  .application-total{
+    text-align: right;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px; 
+    align-items: center;
+  }
   
   .action-link {
     display: flex;

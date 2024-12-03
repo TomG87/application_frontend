@@ -103,7 +103,16 @@ export function ApplicationPost({ userId, token }) {
       <br></br>
       <br></br>
       <br></br>
+      <br></br>
       <h1 className="application-title">Add Application</h1>
+      <div>
+        <div className="application-total">
+          <Link to="/applications" className="action-link">
+            <LiaListAlt className="action-icon" />
+            <span>My Applications</span>
+          </Link>
+        </div>
+      </div>
       {message && <p className="success-message">{message}</p>}
       {unsuccessful && <p className="unsuccessful-message">{unsuccessful}</p>}
       <ul>
@@ -174,12 +183,6 @@ export function ApplicationPost({ userId, token }) {
       <br></br>
       <br></br>
       <br></br>
-      <div>
-        <Link to="/applications" className="action-link">
-          <LiaListAlt className="action-icon" />
-          <span>My Applications</span>
-        </Link>
-      </div>
     </div>
   );
 }
