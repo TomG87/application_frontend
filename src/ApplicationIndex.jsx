@@ -66,8 +66,6 @@ export default function ApplicationIndex({ userId, token }) {
       <br></br>
       <br></br>
       <br></br>
-      <br></br>
-      <br></br>
       <h1 className="applications-title">My Applications</h1>
       <div className="application-add">
         <Link to="/applications/create" className="action-link">

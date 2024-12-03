@@ -196,11 +196,13 @@ text-align: center;
   }
   .application-total{
     text-align: right;
+    font-size: 1em;
     padding: 10px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; 
     gap: 20px; 
-    align-items: center;
+    align-items: right;
+    position: relative;
   }
   
   .action-link {
