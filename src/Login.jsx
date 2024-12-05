@@ -52,6 +52,11 @@ export function Login() {
       <br></br>
       <br></br>
       <h1 className="login-title">Login</h1>
+      <div className="register-link">
+        <Link to="/register" className="action-link">
+          <PiUserCircleDuotone className="action-icon" /> Signup
+        </Link>
+      </div>
 
       {successMessage && <p className="success-message">{successMessage}</p>}
       {unsuccessful && <p className="unsuccessful-message">{unsuccessful}</p>}
@@ -80,11 +85,6 @@ export function Login() {
       <br></br>
       <br></br>
       <br></br>
-      <div className="register-link">
-        <Link to="/register" className="action-link">
-          <PiUserCircleDuotone className="action-icon" /> Signup
-        </Link>
-      </div>
     </div>
   );
 }
