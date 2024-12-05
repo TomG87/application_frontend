@@ -81,8 +81,8 @@ export function Login() {
       <br></br>
       <br></br>
       <div className="register-link">
-        <Link to="/register">
-          <PiUserCircleDuotone className="signup-icon" /> Signup
+        <Link to="/register" className="action-link">
+          <PiUserCircleDuotone className="action-icon" /> Signup
         </Link>
       </div>
     </div>
