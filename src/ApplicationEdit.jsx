@@ -97,6 +97,7 @@ export default function ApplicationEdit({ userId, token }) {
               required
             />
           </div>
+          <br></br>
           <div>
             <label htmlFor="companyName">Company Name:</label>
             <input
@@ -107,6 +108,7 @@ export default function ApplicationEdit({ userId, token }) {
               required
             />
           </div>
+          <br></br>
           <div>
             <label htmlFor="source">Source:</label>
             <input
@@ -117,6 +119,7 @@ export default function ApplicationEdit({ userId, token }) {
               required
             />
           </div>
+          <br></br>
           <div>
             <label htmlFor="applicationLink">Application Link:</label>
             <input
@@ -128,6 +131,7 @@ export default function ApplicationEdit({ userId, token }) {
               required
             />
           </div>
+          <br></br>
           <div>
             <label htmlFor="remote">Remote:</label>
             <input
@@ -137,6 +141,7 @@ export default function ApplicationEdit({ userId, token }) {
               defaultChecked={application.remote}
             />
           </div>
+          <br></br>
           <div>
             <label htmlFor="state">State:</label>
             <input
@@ -147,6 +152,7 @@ export default function ApplicationEdit({ userId, token }) {
               required
             />
           </div>
+          <br></br>
           <div>
             <label htmlFor="response">Response:</label>
             <input
@@ -156,6 +162,7 @@ export default function ApplicationEdit({ userId, token }) {
               defaultChecked={application.response}
             />
           </div>
+          <br></br>
           <div>
             <label htmlFor="notes">Notes:</label>
             <textarea
@@ -164,10 +171,14 @@ export default function ApplicationEdit({ userId, token }) {
               defaultValue={application.notes}
             ></textarea>
           </div>
+          <br></br>
           <div>
             <label htmlFor="attachment">Attachment:</label>
+            <br></br>
+            <br></br>
             <input id="attachment" name="document" type="file" />
           </div>
+          <br></br>
           <button type="submit">Update Application</button>
         </form>
       </div>
