@@ -225,3 +225,11 @@ text-align: center;
     display: inline-block; 
     vertical-align: middle; 
   }
+
+  .edit-title{
+    max-width: 400px;         
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Verdana', sans-serif; 
+  }
