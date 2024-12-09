@@ -75,6 +75,11 @@ export default function ApplicationEdit({ userId, token }) {
 
   return (
     <div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <div className="application-edit-tile">
         <h1>Edit Application</h1>
         {errors.length > 0 && (
