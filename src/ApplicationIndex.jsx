@@ -86,6 +86,14 @@ export default function ApplicationIndex({ userId, token }) {
       </div>
       <br></br>
       <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <div className="application-index-tile">
         {applications.length === 0 ? (
           <p>No applications found.</p>
