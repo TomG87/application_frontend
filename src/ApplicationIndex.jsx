@@ -112,7 +112,9 @@ export default function ApplicationIndex({ userId, token }) {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {application.applicationLink}
+                    {application.applicationLink.length > 50
+                      ? application.applicationLink.substring(0, 50) + "..."
+                      : application.applicationLink}
                   </a>
                 </p>
                 <p>Remote: {application.remote ? "Yes" : "No"}</p>
