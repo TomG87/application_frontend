@@ -94,7 +94,7 @@ text-align: center;
   }
   .application-cards-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 25px;
     grid-auto-rows: minmax(200px, auto);
     align-items: stretch;
