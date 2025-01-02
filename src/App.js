@@ -6,7 +6,6 @@ import { ApplicationPost } from "./ApplicationPost";
 import ApplicationIndex from "./ApplicationIndex";
 import ApplicationEdit from "./ApplicationEdit";
 import React, { useEffect, useState } from "react";
-import image from "./images/image.png";
 import logo from "./images/application-trackstar-high-resolution-logo.png";
 
 function App() {
@@ -50,7 +49,6 @@ function App() {
     <Router>
       <div>
         <div className="app-background">
-          <img src={image} alt="Background Design" />
           <div className="app-logo">
             <img src={logo} alt="Application TrackStar Logo" className="logo" />
             <Routes>
