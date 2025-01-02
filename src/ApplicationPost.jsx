@@ -104,6 +104,9 @@ export function ApplicationPost({ userId, token }) {
       <br></br>
       <br></br>
       <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <h1 className="application-title">Add Application</h1>
       <div>
         <div className="application-total">
