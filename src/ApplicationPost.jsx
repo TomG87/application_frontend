@@ -107,6 +107,7 @@ export function ApplicationPost({ userId, token }) {
       <br></br>
       <br></br>
       <br></br>
+      <br></br>
       <h1 className="application-title">Add Application</h1>
       <div>
         <div className="application-total">
@@ -181,9 +182,6 @@ export function ApplicationPost({ userId, token }) {
         </div>
         <button className="submit">Submit</button>
       </form>
-      <br></br>
-      <br></br>
-      <br></br>
       <br></br>
       <br></br>
     </div>

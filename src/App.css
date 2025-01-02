@@ -83,7 +83,7 @@ text-align: center;
   width: 90%;
 }
 .app-form{   
-  max-width: 350px;         
+  max-width: 300px;         
   margin: 0 auto;            
   padding: 80px;             
   border: 1px solid #cccccc;
@@ -93,7 +93,7 @@ text-align: center;
   display: grid;             
   grid-gap: 25px;
   position: relative;
-  top: 75px; 
+  top: 20px; 
 }
 
   .application-title{
