@@ -21,6 +21,8 @@
   max-width: 800px; 
   max-height: 800px;
   position: absolute;
+  background: none;
+  mix-blend-mode: multiply;
 }
 .form {
   max-width: 350px;         
