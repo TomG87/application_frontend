@@ -128,19 +128,19 @@ export function ApplicationPost({ userId, token }) {
       </ul>
       <form className="app-form" onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="date">Date:</label>
+          <label htmlFor="date">Date: </label>
           <input id="date" name="date" type="date" />
         </div>
         <div>
-          <label htmlFor="companyName">Company Name:</label>
+          <label htmlFor="companyName">Company Name: </label>
           <input id="companyName" name="companyName" type="text" />
         </div>
         <div>
-          <label htmlFor="source">Source:</label>
+          <label htmlFor="source">Source: </label>
           <input id="source" name="source" type="text" />
         </div>
         <div>
-          <label htmlFor="applicationLink">Application Link:</label>
+          <label htmlFor="applicationLink">Application Link: </label>
           <input
             id="applicationLink"
             name="applicationLink"
@@ -149,35 +149,35 @@ export function ApplicationPost({ userId, token }) {
           />
         </div>
         <div>
-          <label htmlFor="remote">Remote:</label>
+          <label htmlFor="remote">Remote: </label>
           <input id="remote" name="remote" type="checkbox" />
         </div>
         <div>
-          <label htmlFor="state">State:</label>
+          <label htmlFor="state">State: </label>
           <input id="state" name="state" type="text" />
         </div>
         <div>
-          <label htmlFor="response">Response:</label>
+          <label htmlFor="response">Response: </label>
           <input id="response" name="response" type="checkbox" />
         </div>
         <div>
-          <label htmlFor="interviewDate">Interview Date:</label>
+          <label htmlFor="interviewDate">Interview Date: </label>
           <input id="interviewDate" name="interviewDate" type="date" />
         </div>
         <div>
-          <label htmlFor="interviewTime">Interview Time:</label>
+          <label htmlFor="interviewTime">Interview Time: </label>
           <input id="interviewTime" name="interviewTime" type="time" />
         </div>
         <div>
-          <label htmlFor="interviewLocation">Interview Location:</label>
+          <label htmlFor="interviewLocation">Interview Location: </label>
           <input id="interviewLocation" name="interviewLocation" type="text" />
         </div>
         <div>
-          <label htmlFor="notes">Notes:</label>
+          <label htmlFor="notes">Notes: </label>
           <textarea id="notes" name="notes"></textarea>
         </div>
         <div>
-          <label htmlFor="attachment">Attachment:</label>
+          <label htmlFor="attachment">Attachment: </label>
           <input id="attachment" name="document" type="file" />
         </div>
         <button className="submit">Submit</button>
