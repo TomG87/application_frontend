@@ -57,15 +57,15 @@ export function Signup() {
 
       <form className="signup-form" onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">Name: </label>
           <input name="name" type="text" />
         </div>
         <div>
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Email: </label>
           <input name="email" type="email" />
         </div>
         <div>
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">Password: </label>
           <input name="password" type="password" />
         </div>
         <button className="submit">Submit</button>
