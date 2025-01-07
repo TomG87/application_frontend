@@ -43,6 +43,11 @@ export function Signup() {
       <br></br>
       <br></br>
       <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <h1 className="signup-title">Signup</h1>
 
       {successMessage && <p className="success-message">{successMessage}</p>}
